@@ -1,0 +1,17 @@
+[alias]
+	mergein = merge --no-ff --log=100
+[user]
+	name = Scott Ferguson
+	email = smferguson@gmail.com
+[color]
+    ui = on
+[core]
+  pager = cat
+  editor = vim
+[branch]
+	autosetuprebase = never
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
