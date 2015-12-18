@@ -1,0 +1,4 @@
+osx:
+- subethaedit
+- f.lux (https://justgetflux.com/)
+- spectacle (http://spectacleapp.com/)
