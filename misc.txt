@@ -1,0 +1,2 @@
+# memory use!
+/bin/ps au --User ec2-user --sort rss >> ps_output_3.txt
