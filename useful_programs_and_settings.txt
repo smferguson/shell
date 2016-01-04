@@ -2,6 +2,7 @@ osx:
 - subethaedit
 - f.lux (https://justgetflux.com/)
 - spectacle (http://spectacleapp.com/)
+- cinch (http://www.irradiatedsoftware.com/cinch/)
 - mouseterm - might not be needed in el capitan:
   - As of OS X El Capitan 10.11, Terminal supports Mouse Reporting. You configure application programs to enable it. For example, in Vim use set mouse=a.
 
