@@ -1,7 +1,7 @@
 #export PATH=/usr/local/git/bin:$PATH
 export GREP_OPTIONS='--color=auto --exclude=*.class --exclude-dir=target'
 export GIT_EDITOR=vim
-export PS1="[\[\033[00m\]\u@\h\[\033[32m\] \W \[\033[31m\]\$(parse_git_branch)\[\033[00m\]]$\[\033[00m\] "
+export PS1="[\[\033[00m\]\u@\h\[\033[32m\] \W \[\033[31m\]($(parse_git_branch))\[\033[00m\]]$\[\033[00m\] "
 export PATH=/usr/local/bin:$PATH
 
 alias s='git status'
@@ -10,7 +10,7 @@ alias d='git diff HEAD'
 alias comp='python ~/py_test_compile.py'
 
 function get() {
-    git log -"$1" | sed 's/commit /https:\/\/github\.com\/REPO_NAME\/BRANCH_NAME\/commit\//' | sed 's/\(.*commit.*\)$/\1\?w=1/' 
+    git log -"$1" | sed "s/commit /https:\/\/github\.com\/ORGANIZATION_NAME\/$(parse_git_branch)\/commit\//" | sed 's/\(.*commit.*\)$/\1/'
 }
 
 # pbcopy is probably osx specific
