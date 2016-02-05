@@ -1,7 +1,7 @@
 #export PATH=/usr/local/git/bin:$PATH
 export GREP_OPTIONS='--color=auto --exclude=*.class --exclude-dir=target'
 export GIT_EDITOR=vim
-export PS1="[\[\033[00m\]\u@\h\[\033[32m\] \W \[\033[31m\]($(parse_git_branch))\[\033[00m\]]$\[\033[00m\] "
+export PS1="[\[\033[00m\]\u@\h\[\033[32m\] \W \[\033[31m\](\$(parse_git_branch))\[\033[00m\]]$\[\033[00m\] "
 export PATH=/usr/local/bin:$PATH
 
 alias s='git status'
