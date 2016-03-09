@@ -4,6 +4,8 @@ any os:
 
 osx:
 - subethaedit
+- sublime
+- trailer (https://ptsochantaris.github.io/trailer/) for github PR management
 - f.lux (https://justgetflux.com/)
 - spectacle (http://spectacleapp.com/)
 - cinch (http://www.irradiatedsoftware.com/cinch/)
