@@ -13,6 +13,12 @@ function get() {
     git log -"$1" | sed "s/commit /https:\/\/github\.com\/ORGANIZATION_NAME\/$(parse_git_branch)\/commit\//" | sed 's/\(.*commit.*\)$/\1/'
 }
 
+# setup a virtualenv
+function ve() {                                                                 
+    virtualenv "$1"                                                             
+    source "$1/bin/activate"                                                    
+}
+
 # pbcopy is osx specific
 function gh() {
     git log -"$1" | grep 'commit' | sed "s/commit /https:\/\/github\.com\/ORG_NAME\/$(parse_git_repo)\/commit\//" | sed 's/\(.*commit.*\)$/\1\?w=1/' | pbcopy
