@@ -10,7 +10,7 @@ alias d='git diff HEAD'
 alias comp='python ~/py_test_compile.py'
 
 function get() {
-    git log -"$1" | sed "s/commit /https:\/\/github\.com\/ORGANIZATION_NAME\/$(parse_git_branch)\/commit\//" | sed 's/\(.*commit.*\)$/\1/'
+    git log -"$1" | sed "s/commit /https:\/\/github\.com\/ORG_NAME\/$(parse_git_branch)\/commit\//" | sed 's/\(.*commit.*\)$/\1/'
 }
 
 # setup a virtualenv
@@ -26,7 +26,7 @@ function gh() {
 }
 
 parse_git_repo() {
-    git config --get remote.origin.url | sed 's/https:\/\/github.com\/Censio\/\(.*\)\.git/\1/'
+    git config --get remote.origin.url | sed 's/https:\/\/github.com\/ORG_NAME\/\(.*\)\.git/\1/'
 }
 
 parse_git_branch() {
