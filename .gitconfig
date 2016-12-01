@@ -2,7 +2,7 @@
 	mergein = merge --no-ff --log=100
 [user]
 	name = Scott Ferguson
-	email = smferguson@gmail.com
+	email =
 [color]
     ui = on
 [core]
