@@ -36,3 +36,8 @@ parse_git_branch() {
 function scp_machine {
     rsync -rlpt -e "ssh -A bastione1 ssh -A" --delete $1 machine:$2
 }
+
+function dc() {
+    sudo docker exec -i -t $1 /bin/bash
+}
+
