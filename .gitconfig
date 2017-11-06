@@ -1,17 +1,21 @@
 [alias]
-	mergein = merge --no-ff --log=100
+    mergein = merge --no-ff --log=100
 [user]
-	name = Scott Ferguson
-	email =
+    name = Scott Ferguson
+    email = 
 [color]
     ui = on
 [core]
   pager = cat
   editor = vim
 [branch]
-	autosetuprebase = never
+    autosetuprebase = never
 [push]
-	default = simple
+    default = simple
+[pull]
+    rebase = true
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+[credential]
+    helper = osxkeychain
