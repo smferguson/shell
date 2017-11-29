@@ -4,13 +4,14 @@ export GIT_EDITOR=vim
 export PS1="[\[\033[00m\]\u@\h\[\033[32m\] \W \[\033[31m\]\$(parse_git_repo)-\$(parse_git_branch)\[\033[00m\]]$\[\033[00m\] "
 export PATH=/usr/local/bin:$PATH
 
+alias ll='ls -al'
 alias s='git status'
 # ignore whitespace: alias d='git diff -w HEAD'
 alias d='git diff HEAD'
 alias comp='python ~/py_test_compile.py'
 
 function get() {
-    git log -"$1" | sed "s/commit /https:\/\/github\.com\/ORG_NAME\/$(parse_git_branch)\/commit\//" | sed 's/\(.*commit.*\)$/\1/'
+    git log -"$1" | sed "s/commit /https:\/\/github\.com\/.*\/$(parse_git_branch)\/commit\//" | sed 's/\(.*commit.*\)$/\1/'
 }
 
 # setup a virtualenv
@@ -21,12 +22,12 @@ function ve() {
 
 # pbcopy is osx specific
 function gh() {
-    git log -"$1" | grep 'commit' | sed "s/commit /https:\/\/github\.com\/ORG_NAME\/$(parse_git_repo)\/commit\//" | sed 's/\(.*commit.*\)$/\1\?w=1/' | pbcopy
-    git log -"$1" | sed "s/commit /https:\/\/github\.com\/ORG_NAME\/$(parse_git_repo)\/commit\//" | sed 's/\(.*commit.*\)$/\1\?w=1/'
+    git log -"$1" | grep 'commit' | sed "s/commit /https:\/\/github\.com\/.*\/$(parse_git_repo)\/commit\//" | sed 's/\(.*commit.*\)$/\1\?w=1/' | pbcopy
+    git log -"$1" | sed "s/commit /https:\/\/github\.com\/.*\/$(parse_git_repo)\/commit\//" | sed 's/\(.*commit.*\)$/\1\?w=1/'
 }
 
 parse_git_repo() {
-    git config --get remote.origin.url | sed 's/https:\/\/github.com\/ORG_NAME\/\(.*\)\.git/\1/'
+    git config --get remote.origin.url | sed 's/https:\/\/github.com\/.*\/\(.*\)\.git/\1/'
 }
 
 parse_git_branch() {
