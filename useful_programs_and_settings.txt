@@ -1,6 +1,7 @@
 any os:
 - evernote
 - spotify
+- font: terminus ttf
 
 osx:
 - subethaedit
@@ -11,7 +12,7 @@ osx:
 - cinch (http://www.irradiatedsoftware.com/cinch/)
 - mouseterm - might not be needed in el capitan:
   - As of OS X El Capitan 10.11, Terminal supports Mouse Reporting. You configure application programs to enable it. For example, in Vim use set mouse=a.
-- pg commander/pgadminIII
+- pg commander/postico
 
 linux:
 - kupfer
