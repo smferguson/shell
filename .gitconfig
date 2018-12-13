@@ -2,12 +2,13 @@
     mergein = merge --no-ff --log=100
 [user]
     name = Scott Ferguson
-    email = 
+    email = <ADD EMAIL>
 [color]
     ui = on
 [core]
   pager = cat
   editor = vim
+  excludesfile = /Users/scott/.gitignore_global
 [branch]
     autosetuprebase = never
 [push]
